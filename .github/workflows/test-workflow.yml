@@ -6,9 +6,14 @@ jobs:
     steps:
       - run: echo static check of the sources
       - run: conda info
-      - uses: actions/checkout@v4
+      - name: checkout repository
+        uses: actions/checkout@v4
       - run: ls
-      - run: conda env create --file=conda.yml
-      - run: conda activate fastapi-web
+      - name: setup conda environement
+        uses: conda-incubator/setup-miniconda@v3
+        with:
+          auto-activate-base: false
+          environment-file: conda.yml
+          activate-environment: fastapi-web
       - run: pip install -r requirements.dev.txt
       - run: mypy main.py
