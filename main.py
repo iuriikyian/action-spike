@@ -5,7 +5,7 @@ PORT = 8001
 app = FastAPI()
 
 @app.get('/')
-def home():
+def home() -> dict[str,str]:
     return dict(
         result='success'
     )
