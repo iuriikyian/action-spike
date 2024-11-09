@@ -6,7 +6,6 @@ jobs:
     steps:
       - run: echo static check of the sources
       - run: conda info
-      - run: conda env update
       - uses: actions/checkout@v4
       - run: ls
-      - run: conda env update --name base --file /app/conda.yml --prune
+      - run: conda env create --file conda.yml --prune
