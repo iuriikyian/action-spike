@@ -1,0 +1,9 @@
+name: static check
+on: ['push']
+jobs:
+  mypy-check:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo static check of the sources
+      - run: conda --version
+      - run: conda info
