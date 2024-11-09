@@ -1,0 +1,9 @@
+name: fastapi-web
+channels:
+  - defaults
+dependencies:
+  - fastapi
+  - jinja2
+  - python=3.12.7
+  - uvicorn
+  - python-multipart

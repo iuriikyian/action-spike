@@ -8,4 +8,4 @@ jobs:
       - run: conda info
       - uses: actions/checkout@v4
       - run: ls
-      - run: conda env create --file conda.yml --prune
+      - run: conda env create --file conda.yml
