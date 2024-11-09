@@ -16,4 +16,4 @@ jobs:
           environment-file: conda.yml
           activate-environment: fastapi-web
       - run: pip install -r requirements.dev.txt
-      - run: mypy main.py
+      - run: mypy --config-file mypy.ini
