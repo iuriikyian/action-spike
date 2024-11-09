@@ -8,4 +8,7 @@ jobs:
       - run: conda info
       - uses: actions/checkout@v4
       - run: ls
-      - run: conda env create --file conda.yml
+      - run: conda env create --file=conda.yml
+      - run: conda activate fastapi-web
+      - run: pip install -r requirements.dev.txt
+      - run: mypy main.py
